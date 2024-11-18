@@ -1,0 +1,10 @@
+name: build-kernel 
+on: [push]
+jobs:
+  check-bats-version:
+    runs-on:
+      labels: sbnb
+    steps:
+      - uses: actions/checkout@v4
+      - run: make defconfig
+      - run: make -j $(nproc)
