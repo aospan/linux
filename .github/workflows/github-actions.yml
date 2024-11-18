@@ -8,3 +8,4 @@ jobs:
       - uses: actions/checkout@v4
       - run: make defconfig
       - run: make -j $(nproc)
+      - run: echo done
