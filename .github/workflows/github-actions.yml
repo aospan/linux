@@ -3,7 +3,7 @@ on: [push]
 jobs:
   build-kernel:
     runs-on:
-      labels: sbnb
+      labels: ubuntu-22.04-16core
     steps:
       - uses: actions/checkout@v4
       - run: make defconfig
